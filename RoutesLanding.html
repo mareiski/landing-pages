@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Routenplanung neu gedacht - Roadtrip-planen.de</title>
+    <!-- Quasar CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/quasar@2.12.0/dist/quasar.prod.css" rel="stylesheet" type="text/css">
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet" type="text/css">
+    <!-- Roboto Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <main>
+    <div class="background-img-landing">
+      <section class="hero q-pb-xl">
+        <div class="container">
+          <div class="hero-inner">
+            <div class="hero-copy">
+              <h1 class="q-mt-none text-h3 text-white">
+                Routenplanung neu gedacht
+              </h1>
+              <p class="hero-paragraph text-white">
+                Plane deine perfekte Route mit unbegrenzten Stopps, teile sie
+                mit anderen und verknüpfe deinen Zeitplan direkt mit der Route.
+                Bei uns gibt es keine Limits - nur grenzenlose Möglichkeiten für
+                deine Reiseplanung.
+              </p>
+              <div class="hero-form field field-grouped">
+                <div>
+                  <a
+                    href="#"
+                    class="q-btn q-btn--flat q-btn--rectangle q-btn--actionable q-focusable q-hoverable text-white q-mr-sm"
+                    style="
+                      color: white;
+                      text-decoration: none;
+                      padding: 8px 16px;
+                      border: 1px solid white;
+                      border-radius: 4px;
+                      display: inline-block;
+                      margin-right: 8px;
+                    "
+                    >Login</a
+                  >
+                  <a
+                    href="https://roundtrips4you.de/planen"
+                    class="q-btn q-btn--unelevated q-btn--rectangle q-btn--actionable q-focusable q-hoverable"
+                    style="
+                      background-color: #d26319;
+                      color: white;
+                      text-decoration: none;
+                      padding: 8px 16px;
+                      border-radius: 4px;
+                      display: inline-block;
+                    "
+                    >Jetzt Route planen</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-illustration hide-on-mobile">
+              <img
+                src="./assets/route_screenshot.png"
+                width="500px"
+                class="shadow-10 bg-white"
+                id="MainImg"
+                style="
+                  position: absolute;
+                  top: 40px;
+                  display: block;
+                  border: 2px white solid;
+                  object-fit: contain;
+                "
+              />
+              <div class="hero-shape hero-shape-1">
+                <svg
+                  width="40"
+                  height="40"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="overflow: visible"
+                >
+                  <circle
+                    class="anime-element fadeup-animation hidden"
+                    cx="20"
+                    cy="20"
+                    r="20"
+                    fill="#FFD8CD"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div class="hero-shape hero-shape-2">
+                <svg
+                  width="88"
+                  height="88"
+                  xmlns="http://www.w3.org/2000/svg"
+                  style="overflow: visible"
+                >
+                  <circle
+                    class="anime-element fadeup-animation"
+                    cx="44"
+                    cy="44"
+                    r="44"
+                    fill="#d26319"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div class="hero-main-shape">
+                <svg
+                  width="50vw"
+                  height="647"
+                  viewBox="0 0 940 647"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  style="overflow: visible"
+                >
+                  <defs>
+                    <linearGradient
+                      x1="100%"
+                      y1="0%"
+                      x2="0%"
+                      y2="100%"
+                      id="hero-illustration-a"
+                    >
+                      <stop stop-color="#d26319" offset="0%" />
+                      <stop stop-color="#d26319" offset="100%" />
+                    </linearGradient>
+                  </defs>
+                  <g fill="none" fill-rule="evenodd">
+                    <path stroke="#d26319" />
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Problem Section -->
+    <section class="problem-section q-py-xl" style="background: #f8f9fa">
+      <div class="container">
+        <div class="text-center q-mb-xl">
+          <h2 class="text-h4 q-mb-md">
+            Die Grenzen herkömmlicher Routenplaner
+          </h2>
+          <p class="text-h6 text-grey-7">
+            Warum andere Routenplaner an ihre Limits stoßen
+          </p>
+        </div>
+
+        <div class="row justify-between">
+          <div class="col-12 col-md-3">
+            <div class="landing-page-card">
+              <div
+                class="q-card q-card--bordered q-card--flat"
+                style="border-radius: 8px"
+              >
+                <div class="q-card__section text-center">
+                  <i
+                    class="material-icons"
+                    style="font-size: 48px; color: #d26319"
+                    >block</i
+                  >
+                  <h3 class="text-h6 q-mt-md q-mb-sm">
+                    Begrenzte Stopps
+                  </h3>
+                  <p>
+                    Viele Routenplaner erlauben nur eine begrenzte Anzahl von Zwischenstopps - frustrierend bei längeren Reisen.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-3">
+            <div class="landing-page-card">
+              <div
+                class="q-card q-card--bordered q-card--flat"
+                style="border-radius: 8px"
+              >
+                <div class="q-card__section text-center">
+                  <i
+                    class="material-icons"
+                    style="font-size: 48px; color: #d26319"
+                    >schedule</i
+                  >
+                  <h3 class="text-h6 q-mt-md q-mb-sm">
+                    Keine Zeitplanung
+                  </h3>
+                  <p>
+                    Route ist nicht Route: Ohne zeitliche Planung wird aus einer schönen Route schnell Stress.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-md-3">
+            <div class="landing-page-card">
+              <div
+                class="q-card q-card--bordered q-card--flat"
+                style="border-radius: 8px"
+              >
+                <div class="q-card__section text-center">
+                  <i
+                    class="material-icons"
+                    style="font-size: 48px; color: #d26319"
+                    >share</i
+                  >
+                  <h3 class="text-h6 q-mt-md q-mb-sm">Nicht teilbar</h3>
+                  <p>
+                    Deine perfekte Route bleibt nur bei dir - Mitreisende oder Freunde können sie nicht einfach einsehen.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="features section">
+      <div class="container">
+        <div class="features-inner section-inner">
+          <div class="features-header text-center">
+            <div class="container-sm">
+              <h2 class="section-title q-mt-none text-h4">
+                Grenzenlose Routenplanung für perfekte Reisen
+              </h2>
+              <p class="section-paragraph">
+                Mit Roadtrip-planen.de planst du Routen ohne Limits,
+                visualisierst sie auf interaktiven Karten und teilst sie mühelos
+                mit anderen.
+              </p>
+            </div>
+          </div>
+          <div class="features-wrap">
+            <div class="landing-page-card">
+              <div
+                class="q-card q-card--bordered q-card--flat"
+                style="border-radius: 8px; height: 400px"
+              >
+                <div
+                  class="q-card__section text-center"
+                  style="
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                  "
+                >
+                  <i
+                    class="material-icons"
+                    style="font-size: 48px; color: #d26319"
+                    >add_location_alt</i
+                  >
+                  <h3 class="text-h6 q-mt-md q-mb-sm">Unbegrenzte Stopps</h3>
+                  <p>
+                    Plane so viele Zwischenstopps wie du möchtest - keine künstlichen Limits, nur deine Träume zählen.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="landing-page-card">
+              <div
+                class="q-card q-card--bordered q-card--flat"
+                style="border-radius: 8px; height: 400px"
+              >
+                <div
+                  class="q-card__section text-center"
+                  style="
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                  "
+                >
+                  <i
+                    class="material-icons"
+                    style="font-size: 48px; color: #d26319"
+                    >map</i
+                  >
+                  <h3 class="text-h6 q-mt-md q-mb-sm">Karten-Visualisierung</h3>
+                  <p>
+                    Sieh deine Route auf einer interaktiven Karte und optimiere die Anordnung deiner Stopps für maximale Effizienz.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="landing-page-card">
+              <div
+                class="q-card q-card--bordered q-card--flat"
+                style="border-radius: 8px; height: 400px"
+              >
+                <div
+                  class="q-card__section text-center"
+                  style="
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                  "
+                >
+                  <i
+                    class="material-icons"
+                    style="font-size: 48px; color: #d26319"
+                    >event</i
+                  >
+                  <h3 class="text-h6 q-mt-md q-mb-sm">
+                    Zeitplan integriert
+                  </h3>
+                  <p>
+                    Verknüpfe deinen detaillierten Zeitplan direkt mit der Route und behalte immer den Überblick.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works Section -->
+    <section
+      class="q-pt-xl flex justify-center q-px-md"
+      style="background: #f8f9fa"
+    >
+      <div class="timeline-container" style="max-width: 900px; width: 100%">
+        <div class="timeline-heading text-center q-pb-md">
+          <h2 class="text-h4">So planst du deine perfekte Route</h2>
+        </div>
+
+        <div class="timeline-steps">
+          <div class="timeline-step">
+            <div class="timeline-icon">
+              <i class="material-icons">add_location</i>
+            </div>
+            <div class="timeline-content">
+              <h3>Stopps hinzufügen</h3>
+              <p class="timeline-subtitle">Schritt 1</p>
+              <p>
+                Füge beliebig viele Orte zu deiner Route hinzu - von
+                Sehenswürdigkeiten über Restaurants bis hin zu Übernachtungsorten.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-icon">
+              <i class="material-icons">map</i>
+            </div>
+            <div class="timeline-content">
+              <h3>Route visualisieren</h3>
+              <p class="timeline-subtitle">Schritt 2</p>
+              <p>
+                Betrachte deine Route auf einer interaktiven Karte und optimiere die
+                Reihenfolge deiner Stopps für eine sinnvolle Anordnung.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-icon">
+              <i class="material-icons">schedule</i>
+            </div>
+            <div class="timeline-content">
+              <h3>Zeitplan erstellen</h3>
+              <p class="timeline-subtitle">Schritt 3</p>
+              <p>
+                Verknüpfe deinen detaillierten Zeitplan mit der Route und plane
+                Ankunfts- und Abfahrtszeiten für jeden Stopp.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-step">
+            <div class="timeline-icon">
+              <i class="material-icons">share</i>
+            </div>
+            <div class="timeline-content">
+              <h3>Route teilen</h3>
+              <p class="timeline-subtitle">Schritt 4</p>
+              <p>
+                Teile deine fertige Route per Link mit Mitreisenden oder speichere
+                sie für später - auch nach der Reise ein schönes Andenken.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="newsletter section text-light">
+      <div class="container-sm">
+        <div class="newsletter-inner section-inner">
+          <div class="newsletter-header text-center">
+            <h2 class="text-white text-h5 mt-0">
+              Starte jetzt deine grenzenlose Routenplanung
+            </h2>
+            <p class="section-paragraph text-white">
+              Plane Routen ohne Limits, visualisiere sie auf Karten und teile
+              sie mit der Welt.
+              <br />
+              <strong>Roadtrip-planen.de</strong> - wo jede Route möglich ist.
+            </p>
+          </div>
+          <div class="flex justify-center">
+            <a
+              href="https://roundtrips4you.de/planen"
+              class="q-btn q-btn--outline q-btn--rectangle q-btn--actionable q-focusable q-hoverable"
+              style="
+                color: white;
+                text-decoration: none;
+                padding: 8px 16px;
+                border: 1px solid white;
+                border-radius: 4px;
+                display: inline-block;
+              "
+              >Jetzt Route planen</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer-inner has-top-divider">
+        <div class="brand footer-brand"></div>
+        <div class="footer-links flex q-pb-sm">
+          <a class="q-mr-sm" href="/Datenschutz">Datenschutz</a>
+          <a class="q-mr-sm" href="/Impressum">Impressum</a>
+          <a class="q-mr-sm" href="/Haftungsausschluss">Haftungsausschluss</a>
+          <a href="/Community-Richtlinie">Richtlinie</a>
+        </div>
+
+        <div class="footer-social-links">
+          <a href="/" class="q-mr-sm">
+            <span>Home</span>
+          </a>
+          <a href="/Affiliates" class="q-mr-sm">
+            <span>Affiliates</span>
+          </a>
+          <a href="/About">
+            <span>Über uns</span>
+          </a>
+        </div>
+        <div class="footer-copyright">
+          &copy; 2025 Roundtrips4you, all rights reserved
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quasar JS -->
+  <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/quasar@2.12.0/dist/quasar.umd.prod.js"></script>
+  
+  <!-- ScrollReveal -->
+  <script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+  
+  <!-- Anime.js -->
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+
+  <script>
+    // Initialize page animations
+    document.addEventListener('DOMContentLoaded', function() {
+      setUpLandingPage();
+      window.addEventListener('scroll', handleScroll);
+    });
+
+    function setUpLandingPage() {
+      document.querySelectorAll('.anime-element').forEach((el) => {
+        el.setAttribute('style', 'display: block;');
+      });
+
+      // Initialize ScrollReveal
+      const sr = ScrollReveal();
+      sr.reveal('.feature, .testimonial, .problem-card, .landing-page-card', {
+        duration: 600,
+        distance: '50px',
+        easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
+        origin: 'bottom',
+        interval: 100,
+      });
+
+      const a = anime.timeline({ autoplay: false });
+      const strokeElement = document.querySelector('.stroke-animation');
+
+      if (strokeElement) {
+        strokeElement.setAttribute(
+          'stroke-dashoffset',
+          anime.setDashoffset(strokeElement),
+        );
+        a.add({
+          targets: '.stroke-animation',
+          strokeDashoffset: {
+            value: 0,
+            duration: 2000,
+            easing: 'easeInOutQuart',
+          },
+          strokeWidth: { value: [0, 2], duration: 2000, easing: 'easeOutCubic' },
+          strokeOpacity: {
+            value: [1, 0],
+            duration: 1000,
+            easing: 'easeOutCubic',
+            delay: 1000,
+          },
+          fillOpacity: {
+            value: [0, 1],
+            duration: 500,
+            easing: 'easeOutCubic',
+            delay: 1300,
+          },
+        })
+          .add({
+            targets: '.fadeup-animation',
+            offset: 1300,
+            translateY: {
+              value: [100, 0],
+              duration: 1500,
+              easing: 'easeOutElastic',
+              delay: function (el, i) {
+                return 150 * i;
+              },
+            },
+            opacity: {
+              value: [0, 1],
+              duration: 200,
+              easing: 'linear',
+              delay: function (el, i) {
+                return 150 * i;
+              },
+            },
+          })
+          .add({
+            targets: '.fadeleft-animation',
+            offset: 1300,
+            translateX: {
+              value: [40, 0],
+              duration: 400,
+              easing: 'easeOutCubic',
+              delay: function (el, i) {
+                return 100 * i;
+              },
+            },
+            opacity: {
+              value: [0, 1],
+              duration: 200,
+              easing: 'linear',
+              delay: function (el, i) {
+                return 100 * i;
+              },
+            },
+          });
+
+        document.documentElement.classList.add('anime-ready');
+        a.play();
+      }
+
+      setTimeout(() => {
+        const mainImg = document.getElementById('MainImg');
+        if (mainImg) {
+          mainImg.style.opacity = '1';
+        }
+      }, 1200);
+    }
+
+    function handleScroll() {
+      // Scroll handling logic if needed
+    }
+  </script>
+
+  <style>
+    /* Base styles */
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -10px;
+    }
+
+    .col-12 {
+      flex: 0 0 100%;
+      padding: 10px;
+    }
+
+    .col-md-3 {
+      flex: 0 0 33.333333%;
+      padding: 10px;
+    }
+
+    .justify-between {
+      justify-content: space-between;
+    }
+
+    .justify-center {
+      justify-content: center;
+    }
+
+    .flex {
+      display: flex;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .text-left {
+      text-align: left;
+    }
+
+    .text-white {
+      color: white;
+    }
+
+    .text-h3 {
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 2.5rem;
+    }
+
+    .text-h4 {
+      font-size: 1.75rem;
+      font-weight: 400;
+      line-height: 2.25rem;
+    }
+
+    .text-h5 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 2rem;
+    }
+
+    .text-h6 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.75rem;
+    }
+
+    .text-grey-7 {
+      color: #5f6368;
+    }
+
+    .q-mt-none {
+      margin-top: 0;
+    }
+
+    .q-mb-md {
+      margin-bottom: 16px;
+    }
+
+    .q-mb-sm {
+      margin-bottom: 8px;
+    }
+
+    .q-mb-xl {
+      margin-bottom: 48px;
+    }
+
+    .q-mt-md {
+      margin-top: 16px;
+    }
+
+    .q-mr-sm {
+      margin-right: 8px;
+    }
+
+    .q-pb-xl {
+      padding-bottom: 48px;
+    }
+
+    .q-pt-xl {
+      padding-top: 48px;
+    }
+
+    .q-py-xl {
+      padding-top: 48px;
+      padding-bottom: 48px;
+    }
+
+    .q-py-md {
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+
+    .q-px-md {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .hide-on-mobile {
+      display: block;
+    }
+
+    /* Timeline styles */
+    .timeline-container {
+      padding: 20px;
+    }
+
+    .timeline-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .timeline-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .timeline-icon {
+      background: #d26319;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .timeline-icon i {
+      font-size: 24px;
+    }
+
+    .timeline-content h3 {
+      margin: 0 0 8px 0;
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+
+    .timeline-subtitle {
+      color: #d26319;
+      font-weight: 500;
+      margin: 0 0 8px 0;
+      font-size: 0.875rem;
+    }
+
+    .timeline-content p:last-child {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .problem-card {
+      transition: transform 0.3s ease;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+    }
+
+    .problem-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .glitter-badge {
+      animation: glitter 2s infinite;
+    }
+
+    @keyframes glitter {
+      0%,
+      100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+    }
+
+    .testimonials-shape {
+      position: absolute;
+      z-index: -1;
+    }
+
+    .testimonials-shape-1 {
+      left: -140px;
+      top: 0;
+    }
+
+    /* Add the same styles from the original Landing.vue + app.scss */
+    .background-img-landing {
+      background-image: url('./assets/roadtrip_landing.webp');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      background-attachment: fixed;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .background-img-landing > section {
+      background-color: #3a3a3a7e;
+    }
+
+    .hero {
+      padding: 100px 0;
+    }
+
+    .hero-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .hero-copy {
+      flex: 1;
+      max-width: 500px;
+    }
+
+    .hero-illustration {
+      flex: 1;
+      position: relative;
+      min-height: 500px;
+    }
+
+    .hero-shape {
+      position: absolute;
+      z-index: 1;
+    }
+
+    .hero-shape-1 {
+      top: 0;
+      right: 200px;
+    }
+
+    .hero-shape-2 {
+      bottom: 100px;
+      right: 50px;
+    }
+
+    .hero-main-shape {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 0;
+    }
+
+    #MainImg {
+      opacity: 0;
+      transition: opacity 1s ease;
+      z-index: 2;
+      position: absolute;
+      right: -53%;
+      top: 0;
+    }
+
+    /* Hide/Show mobile classes */
+    .hide-on-mobile,
+    .hide-on-mobile-flex {
+      display: none;
+    }
+
+    .show-on-mobile {
+      display: none;
+    }
+
+    .features {
+      padding: 80px 0;
+    }
+
+    .features-wrap {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .feature-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin: 0 auto 1.5rem;
+    }
+
+    .testimonials {
+      position: relative;
+      background: linear-gradient(135deg, #b8501a 0%, #9a3d14 100%);
+      padding: 80px 0;
+    }
+
+    .testimonials-wrap {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .testimonial {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 2rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .newsletter {
+      background: linear-gradient(135deg, #d26319 0%, #b8501a 100%);
+      padding: 80px 0;
+    }
+
+    /* Quasar Card Styles */
+    .q-card {
+      background: #fff;
+      border-radius: 4px;
+      box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14),
+        0 3px 1px -2px rgba(0, 0, 0, 0.12);
+      overflow: hidden;
+    }
+
+    .q-card--bordered {
+      border: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    .q-card--flat {
+      box-shadow: none;
+    }
+
+    .q-card__section {
+      padding: 16px;
+    }
+
+    .shadow-10 {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.14),
+        0 1px 18px rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2);
+    }
+
+    .bg-white {
+      background-color: #fff;
+    }
+
+    /* Quasar Button Styles */
+    .q-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 16px;
+      border-radius: 4px;
+      font-weight: 500;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s;
+      border: none;
+      outline: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .q-btn--flat {
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    .q-btn--outline {
+      background-color: transparent;
+      border: 1px solid currentColor;
+    }
+
+    .q-btn--unelevated {
+      box-shadow: none;
+    }
+
+    .q-btn:hover {
+      opacity: 0.8;
+      transform: translateY(-1px);
+    }
+
+    .q-btn:active {
+      transform: translateY(0);
+    }
+
+    /* Quasar Layout Classes */
+    .container-sm {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .section-paragraph {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 2rem;
+    }
+
+    /* Text utilities */
+    .text-light {
+      color: #f5f5f5;
+    }
+
+    .mt-0 {
+      margin-top: 0;
+    }
+
+    /* Hero specific styles */
+    .hero-paragraph {
+      font-size: 1.125rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .hero-form {
+      margin-top: 2rem;
+    }
+
+    .field {
+      display: flex;
+      align-items: center;
+    }
+
+    .field-grouped {
+      gap: 1rem;
+    }
+
+    /* Footer Styles */
+    .site-footer {
+      background-color: #1a1a1a;
+      color: white;
+      padding: 40px 0 20px;
+    }
+
+    .site-footer-inner {
+      text-align: center;
+    }
+
+    .has-top-divider {
+      border-top: 1px solid #333;
+      padding-top: 20px;
+    }
+
+    .footer-brand {
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      margin-bottom: 20px;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      margin-right: 16px;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-social-links {
+      margin-bottom: 20px;
+    }
+
+    .footer-social-links a {
+      color: #ccc;
+      text-decoration: none;
+      margin-right: 16px;
+    }
+
+    .footer-social-links a:hover {
+      color: white;
+    }
+
+    .footer-copyright {
+      color: #999;
+      font-size: 0.875rem;
+    }
+
+    /* Links */
+    a {
+      color: #d26319;
+    }
+
+    /* Glass background effect */
+    .glass-background {
+      background-color: rgba(200, 200, 200, 0.4);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+    }
+
+    /* Desktop styles */
+    @media (min-width: 1024px) {
+      #MainImg {
+        position: relative;
+        right: unset;
+        top: unset;
+      }
+
+      .hide-on-mobile {
+        display: inline;
+      }
+
+      .hide-on-mobile-flex {
+        display: flex;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-inner {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero-illustration {
+        display: none;
+      }
+
+      .hide-on-mobile {
+        display: none;
+      }
+
+      .features-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .testimonials-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .col-md-3 {
+        flex: 0 0 100%;
+      }
+
+      .timeline-step {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .timeline-steps {
+        gap: 60px;
+      }
+
+      .show-on-mobile {
+        display: block;
+      }
+    }
+  </style>
+</body>
+</html>
